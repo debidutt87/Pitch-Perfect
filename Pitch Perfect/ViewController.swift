@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         recordingLabel.text = "Tap to Record"
         recordButton.isEnabled = true
         stopRecordingButton.isEnabled = false
+        performSegue(withIdentifier: "stopRecording", sender:Any?.self)
+        
     }
 }
 
