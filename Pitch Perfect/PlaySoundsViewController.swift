@@ -41,6 +41,11 @@ class PlaySoundsViewController:UIViewController{
         configureUI(.notPlaying)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        configureUI(.notPlaying)
+    }
+    
     // MARK: Actions
     
     @IBAction func playSoundForButton(_ sender: UIButton) {

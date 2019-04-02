@@ -68,5 +68,12 @@ class ViewController: UIViewController,AVAudioRecorderDelegate {
             stopRecordingButton.isEnabled = false
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "stopRecording" {
+            let viewController = segue.destination as! PlaySoundsViewController
+            viewController.recordedAudioURL = audioRecorder.url
+        }
+    }
 }
 
